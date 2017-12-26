@@ -4,9 +4,6 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <spring:url var="css" value="/resources/css" />
-<spring:url var="js" value="/resources/js" />
-<spring:url var="images" value="/resources/images" />
-
 
 <c:set var="contextRoot" value="${pageContext.request.contextPath}" />
 <!DOCTYPE html>
@@ -39,37 +36,41 @@
 
 	<div class="wrapper">
 		<!-- Navigation come here -->
-		<%@include file="./shared/navar.jsp"%>
+		<nav  class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+		     <div class="container">
+		        <div class="navbar-header">
+		            <a href="${contextRoot}/home" class="navbar-brand">Home</a> 
+		        
+		        </div>
+		     
+		     </div> 
+		</nav>
 		<div class="content">
-			<c:if test="${clickOnHome== true}">
-				<%@include file="home.jsp"%>
-			</c:if>
-			<c:if test="${clickOnAbout== true}">
-				<%@include file="about.jsp"%>
-			</c:if>
-			<c:if test="${clickOnContact== true}">
-				<%@include file="contact.jsp"%>
-			</c:if>
-			<c:if test="${clickOnViewProducts==true or clickOnCategoryProducts==true }">
-			  <%@include file="productList.jsp" %>
-			</c:if>
-			<!-- For single product -->
-			<c:if test="${userClickShowProduct==true}">
-			 <%@include file="singleProduct.jsp" %>
-			</c:if>
+			<div class="container">
+			
+			   <div class="row">
+			       
+			       <div class="col-xs-12">
+			          <div class="jumbotron">
+			            <h1>${errorTitle }</h1>
+			            <hr/>
+			            <blockquote style="word-wrap:break-word">
+			               ${errorDescription}
+			            </blockquote>
+			            
+			              
+			           </div>  
+			              
+			       </div>
+			   
+			   </div>
+			</div>
 
 		</div>
 		<!-- Footer -->
 
 		<%@include file="./shared/footer.jsp"%>
 
-		<!-- JavaScript -->
-		<script src="${js}/jquery.js"></script>
-		<script src="${js}/bootstrap.js"></script>
-		<!-- Data table -->
-		<script src="${js}/jquery.dataTables.js"></script>
-		<script src="${js}/dataTales.bootstrap.js"></script>
-		<script src="${js}/myapp.js"></script>
 	</div>
 </body>
 

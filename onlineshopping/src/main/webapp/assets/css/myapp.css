@@ -65,3 +65,9 @@ footer {
 	position: absolute;
 	bottom: 15px;
 }
+
+.dataTableImage{
+	
+	width: 100px;
+	height: 100px;
+}
