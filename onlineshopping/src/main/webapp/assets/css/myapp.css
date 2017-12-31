@@ -66,8 +66,11 @@ footer {
 	bottom: 15px;
 }
 
-.dataTableImage{
-	
+.dataTableImage {
 	width: 100px;
 	height: 100px;
+}
+
+.help-block{
+	color: #FF0000;
 }

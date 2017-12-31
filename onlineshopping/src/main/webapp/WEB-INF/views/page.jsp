@@ -1,8 +1,9 @@
 <%@page import="com.fasterxml.jackson.annotation.JsonInclude.Include"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
 <spring:url var="css" value="/resources/css" />
 <spring:url var="js" value="/resources/js" />
 <spring:url var="images" value="/resources/images" />
@@ -23,6 +24,8 @@
 <!-- Bootstrap core CSS -->
 <link href="${css}/bootstrap.css" rel="stylesheet">
 
+<link href="${css}/bootstrap-readable-theme.css" rel="stylesheet">
+
 <link href="${css}/dataTables.bootstrap.css" rel="stylesheet">
 
 <!-- Add custom CSS here -->
@@ -30,7 +33,7 @@
 
 <script type="text/javascript">
 	window.menu = "${title}";
-	window.contextRoot="${contextRoot}";
+	window.contextRoot = "${contextRoot}";
 </script>
 
 </head>
@@ -50,12 +53,16 @@
 			<c:if test="${clickOnContact== true}">
 				<%@include file="contact.jsp"%>
 			</c:if>
-			<c:if test="${clickOnViewProducts==true or clickOnCategoryProducts==true }">
-			  <%@include file="productList.jsp" %>
+			<c:if
+				test="${clickOnViewProducts==true or clickOnCategoryProducts==true }">
+				<%@include file="productList.jsp"%>
 			</c:if>
 			<!-- For single product -->
 			<c:if test="${userClickShowProduct==true}">
-			 <%@include file="singleProduct.jsp" %>
+				<%@include file="singleProduct.jsp"%>
+			</c:if>
+			<c:if test="${userClickManageProducts==true}">
+				<%@include file="manageProducts.jsp"%>
 			</c:if>
 
 		</div>
@@ -65,11 +72,15 @@
 
 		<!-- JavaScript -->
 		<script src="${js}/jquery.js"></script>
+		
 		<script src="${js}/bootstrap.js"></script>
 		<!-- Data table -->
 		<script src="${js}/jquery.dataTables.js"></script>
-		<script src="${js}/dataTales.bootstrap.js"></script>
+		
+		<script src="${js}/dataTables.bootstrap.js"></script>
+		
 		<script src="${js}/myapp.js"></script>
+		
 	</div>
 </body>
 

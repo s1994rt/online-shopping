@@ -1,4 +1,5 @@
 $(function() {
+
 	// solving the active prolem of the menu bar
 	switch (menu) {
 	case 'About':
@@ -10,6 +11,9 @@ $(function() {
 	case 'All Products':
 		$('#productList').addClass('active');
 		break;
+	case 'Manage Products':
+		$('#manageProducts').addClass('active');
+		break;	
 	default:
 		if (menu == "home")
 			break;
@@ -106,4 +110,17 @@ $(function() {
 
 				});
 	}
+	
+	
+	//dismiss the alert box after 3 seconds
+		
+		/*var $alert = $('.alert');
+		if( $alert.lenght ){
+			console.log("inside if");
+			setTimeout(function(){
+				$alert.fadeOut('slow');
+			},3000)
+		}*/
+		
+	
 });
