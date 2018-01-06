@@ -72,12 +72,17 @@
 
 		<!-- JavaScript -->
 		<script src="${js}/jquery.js"></script>
-		
+		<!-- jquery validation -->
+		<script src="${js}/jquery.validate.js"></script>
+		 
 		<script src="${js}/bootstrap.js"></script>
 		<!-- Data table -->
 		<script src="${js}/jquery.dataTables.js"></script>
 		
 		<script src="${js}/dataTables.bootstrap.js"></script>
+		
+		<!-- For bootBox alert -->
+		<script src="${js}/bootbox.min.js"></script>
 		
 		<script src="${js}/myapp.js"></script>
 		

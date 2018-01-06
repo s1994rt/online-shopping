@@ -52,6 +52,7 @@ footer {
 }
 
 /* costom styling*/
+
 .wrapper {
 	min-height: 100%;
 	position: relative;
@@ -74,3 +75,12 @@ footer {
 .help-block{
 	color: #FF0000;
 }
+
+.adminDataTableImg {
+	
+	height: 50px;
+	width: 50px;
+}
+
+
+
